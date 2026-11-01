@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Prompt", Arial, Helvetica, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  background-color: #f8eeee;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 16px;
+  color: #603c45;
+}
+
+.card {
+  width: 100%;
+  max-width: 710px;
+  background-color: #fffafa;
+  border: 1px solid #e5d2ce;
+  border-radius: 14px;
+  padding: 34px;
+}
+
+.small-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #ae6978;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #5c3540;
+}
+
+.subtitle {
+  margin-top: 5px;
+  margin-bottom: 24px;
+  font-size: 17px;
+  color: #73565c;
+}
+
+/* ---------- Form ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  height: 54px;
+  padding: 0 14px;
+  border: 1px solid #debfc2;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+/* the title input sits in a column, so do not let flex shrink its height */
+.form > input {
+  flex: none;
+}
+
+.add-btn {
+  width: 76px;
+  border: none;
+  border-radius: 7px;
+  background-color: #aa6172;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn span {
+  font-size: 18px;
+}
+
+.cancel-btn {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border: 1px solid #debfc2;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #73565c;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.typing-box {
+  margin-top: 12px;
+  padding: 11px;
+  border-radius: 7px;
+  background-color: #f7e9e7;
+  color: #67484f;
+  font-size: 16px;
+}
+
+.error-message {
+  margin: 12px 0 0;
+  padding: 11px;
+  border-radius: 7px;
+  background-color: #fbe3e3;
+  border: 1px solid #e3a9a9;
+  color: #9b2c2c;
+}
+
+/* ---------- Header + filter ---------- */
+.watchlist-header {
+  margin-top: 43px;
+  padding-bottom: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.watchlist-header h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #5c3540;
+}
+
+.filters {
+  display: flex;
+  gap: 6px;
+}
+
+.filter-btn {
+  padding: 6px 12px;
+  border: 1px solid #debfc2;
+  border-radius: 999px;
+  background-color: white;
+  color: #73565c;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background-color: #aa6172;
+  border-color: #aa6172;
+  color: white;
+}
+
+.empty-message {
+  margin-top: 38px;
+  color: #a2767e;
+  font-size: 16px;
+}
+
+/* ---------- List ---------- */
+.drama-item {
+  min-height: 65px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eadcda;
+}
+
+.drama-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.drama-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.drama-title.done {
+  text-decoration: line-through;
+  color: #a2767e;
+}
+
+.drama-meta {
+  font-size: 14px;
+  color: #a2767e;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.watch-btn {
+  background-color: #c9a0a8;
+}
+
+.watch-btn.active {
+  background-color: #6f9a7d;
+}
+
+.edit-btn {
+  background-color: #8c6a73;
+}
+
+.delete-btn {
+  background-color: #a75c6e;
+}
